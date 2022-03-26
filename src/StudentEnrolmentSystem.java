@@ -58,19 +58,27 @@ class StudentEnrolmentSystem {
     public static void main(String[] args) {
 
         StudentEnrolmentSystem enrolmentObject = new StudentEnrolmentSystem();
-        while(true) { // using a while loop so user can enter input values upto 7.
         Scanner userInput = new Scanner(System.in); // using scanner for reading user's input
-        int inputValue = userInput.nextInt();
-        if(inputValue==7)
-            break;
-        System.out.print("1. Display all students");
-        System.out.print("2. Display all subjects");
-        System.out.print("3. Find a student");
-        System.out.print("4. Find a subject");
-        System.out.print("5. Add an enrolment");
-        System.out.print("6. Display a student's enrolments");
-        System.out.print("7. Exit");
+        /*
+        Scanner studentNumberInput = new Scanner(System.in);
+        Scanner subjectNumberInput = new Scanner(System.in);
+        Scanner studentNumInput = new Scanner(System.in);
+        Scanner subjectNumInput = new Scanner(System.in);
+        */
 
+        System.out.println("1. Display all students");
+        System.out.println("2. Display all subjects");
+        System.out.println("3. Find a student");
+        System.out.println("4. Find a subject");
+        System.out.println("5. Add an enrolment");
+        System.out.println("6. Display a student's enrolments");
+        System.out.println("7. Exit");
+        System.out.print("\nPlease select one from the menu: ");
+
+        while(true) { // using a while loop so user can enter input values upto 7.
+            int inputValue = userInput.nextInt();
+            if(inputValue==7)
+                break;
         /*
         Using switch to iterate through the above options.
 
@@ -93,10 +101,9 @@ class StudentEnrolmentSystem {
                     break;
 
                 case 3:
-                    // finding a student
-                    Scanner studentNumberInput = new Scanner(System.in);
-                    // this scanner will record user input for student number
-                    int stdNumInput = studentNumberInput.nextInt();
+                    //finding a student
+                    //this scanner will record user input for student number
+                    int stdNumInput = userInput.nextInt();
                     if (enrolmentObject.students.contains(stdNumInput)) { // checking if student number exists in student list
                         System.out.println(enrolmentObject.students.get(stdNumInput));
                     }
@@ -104,25 +111,30 @@ class StudentEnrolmentSystem {
 
                 case 4:
                     // finding a subject
-                    Scanner subjectNumberInput = new Scanner(System.in);
                     // this scanner will record user input for subject number
-                    int subNumInput = subjectNumberInput.nextInt();
+                    int subNumInput = userInput.nextInt();
                     if (enrolmentObject.subjects.contains(subNumInput)) { // checking if subject number exists in subject list
                         System.out.println(enrolmentObject.subjects.get(subNumInput));
                     }
                     break;
 
-            /*case 5:
-            // adding an enrollment
 
-            break;
+                case 5:
+                    // taking user input for student & subject to add into enrollment if not enrolled already.
+                    int studentNum = userInput.nextInt();
+                    String subjectNum = userInput.nextLine();
+                    String enrolledDate= "26/03/2022";
+                    Enrolment enrollmentObject = new Enrolment(studentNum, subjectNum, enrolledDate);
+                    if(!enrolmentObject.enrolments.contains(studentNum)  && enrolmentObject.enrolments.contains(subjectNum)) {
+                        enrolmentObject.enrolments.add(enrollmentObject);
+                    }
+                    break;
 
-            case 6:
-            break;
+                case 6:
+                    break;
 
-            case 7:
-            break;*/
-
+                case 7:
+                    break;
                 default:
                     System.out.println("nothing else matched!");
             }
