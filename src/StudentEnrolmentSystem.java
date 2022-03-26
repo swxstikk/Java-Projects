@@ -96,7 +96,7 @@ class StudentEnrolmentSystem {
 
                 case 1:
                     // print out all the student details
-                    System.out.println(enrolmentObject);
+                    System.out.println(enrolmentObject.students);
                     break;
 
                 case 2:
@@ -110,6 +110,8 @@ class StudentEnrolmentSystem {
                     int stdNumInput = userInput.nextInt();
                     if (enrolmentObject.students.contains(stdNumInput)) { // checking if student number exists in student list
                         System.out.println(enrolmentObject.students.get(stdNumInput));
+                    } else {
+                        System.out.println("The student " + stdNumInput + " does not exist.");
                     }
                     break;
 
@@ -119,6 +121,8 @@ class StudentEnrolmentSystem {
                     int subNumInput = userInput.nextInt();
                     if (enrolmentObject.subjects.contains(subNumInput)) { // checking if subject number exists in subject list
                         System.out.println(enrolmentObject.subjects.get(subNumInput));
+                    } else {
+                        System.out.println("The subject " + subNumInput + " does not exist.");
                     }
                     break;
 
@@ -131,13 +135,24 @@ class StudentEnrolmentSystem {
                     Enrolment enrollmentObject = new Enrolment(studentNum, subjectNum, enrolledDate);
                     if(!enrolmentObject.enrolments.contains(studentNum)  && enrolmentObject.enrolments.contains(subjectNum)) {
                         enrolmentObject.enrolments.add(enrollmentObject);
+                    } else {
+                        System.out.println("The student " + studentNum + " has enrolled in the " +
+                                "subject " + subjectNum + " already");
                     }
                     break;
 
                 case 6:
+                    // displaying a student's enrolment.
+                    int studentId = userInput.nextInt();
+                    if(enrolmentObject.enrolments.contains(studentId)) {
+                        System.out.println(enrolmentObject.enrolments.get(studentId));
+                    } else {
+                        System.out.println("The student " + studentId + " hasn't enrolled in a subject.");
+                    }
                     break;
 
                 case 7:
+                    System.out.println("Bye");
                     break;
                 default:
                     System.out.println("nothing else matched!");
