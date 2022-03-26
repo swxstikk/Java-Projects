@@ -11,13 +11,14 @@ class StudentEnrolmentSystem {
 
 
     public StudentEnrolmentSystem() {
-        // default constructor
+        // initialization constructor which creates empty lists for all data members of the class.
+
+        students = new ArrayList<Student>(0);
+        subjects = new ArrayList<Subject>(0);
+        enrolments = new ArrayList<Enrolment>(0);
     }
 
-    public StudentEnrolmentSystem(Student studentObject) {
-        // another constructor for testing purposes
-    }
-
+    /*
     public StudentEnrolmentSystem(ArrayList<Student> students, ArrayList<Subject> subjects, ArrayList<Enrolment> enrolments) {
 
         // assigning empty lists to data members
@@ -25,6 +26,7 @@ class StudentEnrolmentSystem {
         this.subjects = subjects;
         this.enrolments = enrolments;
     }
+     */
 
 
     public void addStudent(Student studentObject) {
@@ -64,7 +66,10 @@ class StudentEnrolmentSystem {
         StudentEnrolmentSystem enrolmentObject = new StudentEnrolmentSystem();
         Student Swastik = new Student(7232408, "Swastik Satapathy", "26/10/2001", "ss7796@uowmail.edu.au", "Kooloobong" +
                 "Villages", "+61 0493301202", "BSc Computer Science (766)");
-        enrolmentObject.students.addStudent(Swastik);
+        Subject CSIT121 = new Subject("CSIT121", "Object-Oriented Programming and Design", 6, "This subject teaches OOP"
+                ,"CSIT111", 2, 2);
+        enrolmentObject.addStudent(Swastik);
+        enrolmentObject.addSubject(CSIT121);
         Scanner userInput = new Scanner(System.in); // using scanner for reading user's input
         /*
         Scanner studentNumberInput = new Scanner(System.in);
@@ -99,7 +104,7 @@ class StudentEnrolmentSystem {
 
                 case 1:
                     // print out all the student details
-                    System.out.println(enrolmentObject.students);
+                    System.out.println(enrolmentObject);
                     break;
 
                 case 2:
@@ -145,6 +150,15 @@ class StudentEnrolmentSystem {
                 default:
                     System.out.println("nothing else matched!");
             }
+            System.out.println(" "); // printing empty line for spacing according to assignment specifications.
+            System.out.println("1. Display all students");
+            System.out.println("2. Display all subjects");
+            System.out.println("3. Find a student");
+            System.out.println("4. Find a subject");
+            System.out.println("5. Add an enrolment");
+            System.out.println("6. Display a student's enrolments");
+            System.out.println("7. Exit");
+            System.out.print("\nPlease select one from the menu: ");
         }
     }
 
