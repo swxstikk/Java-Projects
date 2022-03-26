@@ -58,9 +58,11 @@ class StudentEnrolmentSystem {
     public static void main(String[] args) {
 
         StudentEnrolmentSystem enrolmentObject = new StudentEnrolmentSystem();
+        while(true) { // using a while loop so user can enter input values upto 7.
         Scanner userInput = new Scanner(System.in); // using scanner for reading user's input
         int inputValue = userInput.nextInt();
-
+        if(inputValue==7)
+            break;
         System.out.print("1. Display all students");
         System.out.print("2. Display all subjects");
         System.out.print("3. Find a student");
@@ -73,36 +75,42 @@ class StudentEnrolmentSystem {
         Using switch to iterate through the above options.
 
         To-Do List:
-        - Implement a system where the input will be asked until '7' is reached.
+        - Implement a system where the input will be asked until '7' is reached. (DONE)
         - Build the UML Diagram for the entire program.
         - Figure out the relationships between the 4 different classes for the UML.
 
         */
-        switch(inputValue) {
+            switch (inputValue) {
 
-            case 1:
-                // print out all the student details
-                System.out.println(enrolmentObject.students);
-                break;
-
-            case 2:
-                // print out all the subject details
-                System.out.println(enrolmentObject.subjects);
-                break;
-
-            case 3:
-                // finding a student
-                if(enrolmentObject.students.contains(userInput)) {
+                case 1:
+                    // print out all the student details
                     System.out.println(enrolmentObject.students);
-                }
-                break;
+                    break;
 
-            case 4:
-                // finding a subject
-                if(enrolmentObject.subjects.contains(userInput)) {
+                case 2:
+                    // print out all the subject details
                     System.out.println(enrolmentObject.subjects);
-                }
-                break;
+                    break;
+
+                case 3:
+                    // finding a student
+                    Scanner studentNumberInput = new Scanner(System.in);
+                    // this scanner will record user input for student number
+                    int stdNumInput = studentNumberInput.nextInt();
+                    if (enrolmentObject.students.contains(stdNumInput)) { // checking if student number exists in student list
+                        System.out.println(enrolmentObject.students.get(stdNumInput));
+                    }
+                    break;
+
+                case 4:
+                    // finding a subject
+                    Scanner subjectNumberInput = new Scanner(System.in);
+                    // this scanner will record user input for subject number
+                    int subNumInput = subjectNumberInput.nextInt();
+                    if (enrolmentObject.subjects.contains(subNumInput)) { // checking if subject number exists in subject list
+                        System.out.println(enrolmentObject.subjects.get(subNumInput));
+                    }
+                    break;
 
             /*case 5:
             // adding an enrollment
@@ -115,11 +123,10 @@ class StudentEnrolmentSystem {
             case 7:
             break;*/
 
-            default:
-                System.out.println("nothing else matched!");
+                default:
+                    System.out.println("nothing else matched!");
+            }
         }
-
-
     }
 
 }
