@@ -1,3 +1,14 @@
+/*
+------------------------------------------------------
+My name: Swastik Satapathy
+My student number: 7232408
+My course code: CSIT121
+My email address: ss7796@uowmail.edu.au
+Assignment number: 1
+-------------------------------------------------------
+*/
+
+
 import java.util.ArrayList; // used for creating lists to store objects
 import java.util.Scanner;
 

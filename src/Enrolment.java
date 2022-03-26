@@ -1,3 +1,13 @@
+/*
+------------------------------------------------------
+My name: Swastik Satapathy
+My student number: 7232408
+My course code: CSIT121
+My email address: ss7796@uowmail.edu.au
+Assignment number: 1
+-------------------------------------------------------
+*/
+
 public class Enrolment {
     private int number; //student number
     private String code, date; //subject code and enrolment date
