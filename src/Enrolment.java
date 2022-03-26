@@ -56,7 +56,26 @@ public class Enrolment {
         this.date=newDate;
     }
 
+    public String toString() {
+        String e = "------------\n";
 
+        e += "Enrolment details: " + number + code + date + "\n\n";
 
+        /*
+        'enrolments' arrayList is defined in another class(StudentEnrolmentSystem) Therefore, the error in the below lines of code.
+        Commenting out the for loop temporarily until I get a clarification from the lecturer regarding my question.
+            - Sent a mail to the lecturer on further clarity regarding the addition of data members and methods apart
+            from the ones mentioned in the assignment document.
+            - Test the toString override method in the StudentEnrolmentSystem class to check if the output is
+            properly formatted according to assignment specifications.
+
+        for(Enrolment enrolment:enrolments)
+            e+=enrolments;
+
+        return e+"------------";
+    }
+        */
+        return e;
+    }
 
 }

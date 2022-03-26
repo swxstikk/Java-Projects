@@ -29,17 +29,6 @@ class StudentEnrolmentSystem {
         enrolments = new ArrayList<Enrolment>(0);
     }
 
-    /*
-    public StudentEnrolmentSystem(ArrayList<Student> students, ArrayList<Subject> subjects, ArrayList<Enrolment> enrolments) {
-
-        // assigning empty lists to data members
-        this.students = students;
-        this.subjects = subjects;
-        this.enrolments = enrolments;
-    }
-     */
-
-
     public void addStudent(Student studentObject) {
         // checking if student already exists in the list. If not, we add it to the list.
         if(!students.contains(studentObject)) {
@@ -69,8 +58,6 @@ class StudentEnrolmentSystem {
     public void findSubject() {
         // finding if given values corresponding to subject attributes exists in our subject list.
     }
-
-
 
     public static void main(String[] args) {
 

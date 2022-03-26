@@ -16,7 +16,7 @@ public class Student {
     public Student() {
 
         // creating a default empty constructor to avoid system to generate null values for the data members.
-        this(0,"","","","","","");
+        this(0, "", "", "", "", "", "");
 
     }
 
@@ -24,13 +24,13 @@ public class Student {
 
         // assigning values to all data members
 
-        this.number=studentNumber;
-        this.name=name;
-        this.dob=dob;
-        this.email=email;
-        this.address=address;
-        this.phone=phoneNumber;
-        this.degree=degreeName;
+        this.number = studentNumber;
+        this.name = name;
+        this.dob = dob;
+        this.email = email;
+        this.address = address;
+        this.phone = phoneNumber;
+        this.degree = degreeName;
     }
 
     // defining the public access methods which returns value of private data members.
@@ -74,23 +74,44 @@ public class Student {
     }
 
     public void setDOB(String newDOB) {
-        dob=newDOB;
+        dob = newDOB;
     }
 
     public void setEmail(String newEmail) {
-        email=newEmail;
+        email = newEmail;
     }
 
     public void setAddress(String newAddress) {
-        address=newAddress;
+        address = newAddress;
     }
 
     public void setPhone(String newPhone) {
-        phone=newPhone;
+        phone = newPhone;
     }
 
     public void setDegree(String newDegree) {
-        degree=newDegree;
+        degree = newDegree;
     }
 
+    public String toString() {
+        String s = "------------\n";
+
+        s += "Student details: " + number + name + dob + email + address + phone + degree + "\n\n";
+
+        /*
+        'students' arrayList is defined in another class(StudentEnrolmentSystem) Therefore, the error in the below lines of code.
+        Commenting out the for loop temporarily until I get a clarification from the lecturer regarding my question.
+            - Sent a mail to the lecturer on further clarity regarding the addition of data members and methods apart
+            from the ones mentioned in the assignment document.
+            - Test the toString override method in the StudentEnrolmentSystem class to check if the output is
+            properly formatted according to assignment specifications.
+
+        for(Student student:students)
+            s+=students;
+
+        return s+"------------";
+    }
+        */
+        return s;
+    }
 }
