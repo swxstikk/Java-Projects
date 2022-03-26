@@ -14,6 +14,10 @@ class StudentEnrolmentSystem {
         // default constructor
     }
 
+    public StudentEnrolmentSystem(Student studentObject) {
+        // another constructor for testing purposes
+    }
+
     public StudentEnrolmentSystem(ArrayList<Student> students, ArrayList<Subject> subjects, ArrayList<Enrolment> enrolments) {
 
         // assigning empty lists to data members
@@ -58,6 +62,9 @@ class StudentEnrolmentSystem {
     public static void main(String[] args) {
 
         StudentEnrolmentSystem enrolmentObject = new StudentEnrolmentSystem();
+        Student Swastik = new Student(7232408, "Swastik Satapathy", "26/10/2001", "ss7796@uowmail.edu.au", "Kooloobong" +
+                "Villages", "+61 0493301202", "BSc Computer Science (766)");
+        enrolmentObject.students.addStudent(Swastik);
         Scanner userInput = new Scanner(System.in); // using scanner for reading user's input
         /*
         Scanner studentNumberInput = new Scanner(System.in);
