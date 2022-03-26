@@ -69,12 +69,6 @@ class StudentEnrolmentSystem {
         enrolmentObject.addStudent(Swastik);
         enrolmentObject.addSubject(CSIT121);
         Scanner userInput = new Scanner(System.in); // using scanner for reading user's input
-        /*
-        Scanner studentNumberInput = new Scanner(System.in);
-        Scanner subjectNumberInput = new Scanner(System.in);
-        Scanner studentNumInput = new Scanner(System.in);
-        Scanner subjectNumInput = new Scanner(System.in);
-        */
 
         System.out.println("1. Display all students");
         System.out.println("2. Display all subjects");
