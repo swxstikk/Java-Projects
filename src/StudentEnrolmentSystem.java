@@ -96,8 +96,11 @@ class StudentEnrolmentSystem {
 
         To-Do List:
         - Implement a system where the input will be asked until '7' is reached. (DONE)
-        - Figure out why the hashcode of the Objects/Lists gets printed instead of the actual values.
-        - Build the UML Diagram for the entire program.
+            * Implemented a while loop to iterate through the switch case until user inputs 7.
+        - Figure out why the hashcode of the Objects/Lists gets printed instead of the actual values. (DONE)
+            * Overriding toString() methods in every class to format output according to assignment specifications.
+        - Build the UML Diagram for the entire program. (DONE)
+            * Implemented the UML Diagram using Lucid Chart.
         - Figure out the relationships between the 4 different classes for the UML.
 
         */
