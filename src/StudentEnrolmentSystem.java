@@ -31,30 +31,48 @@ class StudentEnrolmentSystem {
         // checking if student already exists in the list. If not, we add it to the list.
         if(!students.contains(studentObject)) {
             students.add(studentObject);
+        } else {
+            System.out.println("The student already exists in the list");
         }
     }
 
     public void addSubject(Subject subjectObject) {
         // checking if subject already exists in the list. If not, we add it to the list.
-        if(!subjects.contains(subjectObject)) {
+        if (!subjects.contains(subjectObject)) {
             subjects.add(subjectObject);
+        } else {
+            System.out.println("The subject already exists in the list");
         }
     }
 
     public void addEnrollment(Enrolment enrolmentObject) {
         // checking if enrolment record already exists in the list. if not, we add it to the list.
-        if(!enrolments.contains(enrolmentObject)) {
+        if (!enrolments.contains(enrolmentObject)) {
             enrolments.add(enrolmentObject);
+        } else {
+            System.out.println("The enrolment record already exists in the list");
         }
     }
 
-    public void findStudent() {
+    public Student findStudent(Student studentNumber) {
         // finding if given values corresponding to student attributes exists in our student list.
-
+        Student testStudent = new Student();
+        return testStudent;
     }
 
     public void findSubject() {
         // finding if given values corresponding to subject attributes exists in our subject list.
+    }
+
+    private void menu() {
+        System.out.println("1. Display all students");
+        System.out.println("2. Display all subjects");
+        System.out.println("3. Find a student");
+        System.out.println("4. Find a subject");
+        System.out.println("5. Add an enrolment");
+        System.out.println("6. Display a student's enrolments");
+        System.out.println("7. Exit");
+        System.out.print("\nPlease select one from the menu: ");
     }
 
     public static void main(String[] args) {
@@ -68,16 +86,8 @@ class StudentEnrolmentSystem {
         enrolmentObject.addSubject(CSIT121);
         Scanner userInput = new Scanner(System.in); // using scanner for reading user's input
 
-        System.out.println("1. Display all students");
-        System.out.println("2. Display all subjects");
-        System.out.println("3. Find a student");
-        System.out.println("4. Find a subject");
-        System.out.println("5. Add an enrolment");
-        System.out.println("6. Display a student's enrolments");
-        System.out.println("7. Exit");
-        System.out.print("\nPlease select one from the menu: ");
-
         while(true) { // using a while loop so user can enter input values upto 7.
+            enrolmentObject.menu();
             int inputValue = userInput.nextInt();
             if(inputValue==7)
                 break;
@@ -109,9 +119,10 @@ class StudentEnrolmentSystem {
                     //this scanner will record user input for student number
                     System.out.print("Input a student number: ");
                     int stdNumInput = userInput.nextInt();
-                    if (enrolmentObject.students.contains(stdNumInput)) { // checking if student number exists in student list
+                    if (enrolmentObject.students.contains(stdNumInput)) {
+                        //System.out.println("The student " + stdNumInput + " does not exist.");
                         System.out.println(enrolmentObject.students.indexOf(stdNumInput));
-                    } else {
+                    } else { // checking if student number exists in student list
                         System.out.println("The student " + stdNumInput + " does not exist.");
                     }
                     break;
@@ -131,15 +142,18 @@ class StudentEnrolmentSystem {
 
                 case 5:
                     // taking user input for student & subject to add into enrollment if not enrolled already.
+                    System.out.println("Input a student number: ");
                     int studentNum = userInput.nextInt();
+                    System.out.println("Input a subject code: ");
                     String subjectNum = userInput.nextLine();
-                    String enrolledDate= "26/03/2022";
-                    Enrolment enrollmentObject = new Enrolment(studentNum, subjectNum, enrolledDate);
-                    if(!enrolmentObject.enrolments.contains(studentNum)  && enrolmentObject.enrolments.contains(subjectNum)) {
-                        enrolmentObject.enrolments.add(enrollmentObject);
-                    } else {
+                    if(enrolmentObject.enrolments.contains(studentNum)  && enrolmentObject.enrolments.contains(subjectNum)) {
                         System.out.println("The student " + studentNum + " has enrolled in the " +
                                 "subject " + subjectNum + " already");
+                    } else {
+                        Enrolment enrollmentObject = new Enrolment(studentNum, subjectNum);
+                        enrolmentObject.addEnrollment(enrollmentObject);
+                        System.out.println("A new enrolment for the student " + studentNum + " on the subject "
+                                + subjectNum + " has been added to the list.");
                     }
                     break;
 
@@ -160,14 +174,7 @@ class StudentEnrolmentSystem {
                     System.out.println("nothing else matched!");
             }
             System.out.println(" "); // printing empty line for spacing according to assignment specifications.
-            System.out.println("1. Display all students");
-            System.out.println("2. Display all subjects");
-            System.out.println("3. Find a student");
-            System.out.println("4. Find a subject");
-            System.out.println("5. Add an enrolment");
-            System.out.println("6. Display a student's enrolments");
-            System.out.println("7. Exit");
-            System.out.print("\nPlease select one from the menu: ");
+            enrolmentObject.menu();
         }
     }
 

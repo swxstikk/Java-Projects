@@ -16,16 +16,13 @@ public class Enrolment {
     public Enrolment() {
 
         // creating a default empty constructor to avoid system to generate null values for the data members.
-        this(0,"","");
 
     }
-    public Enrolment(int numberInput, String codeInput, String dateInput) {
+    public Enrolment(int numberInput, String codeInput) {
 
-        // assigning values to all data members
-
+        // assigning values to data members
         this.number=numberInput;
         this.code=codeInput;
-        this.date=dateInput;
     }
 
     // defining the public access methods which returns value of private data members.
