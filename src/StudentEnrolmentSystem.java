@@ -7,8 +7,6 @@ My email address: ss7796@uowmail.edu.au
 Assignment number: 1
 -------------------------------------------------------
 */
-
-
 import java.util.ArrayList; // used for creating lists to store objects
 import java.util.Scanner;
 
@@ -96,12 +94,12 @@ class StudentEnrolmentSystem {
 
                 case 1:
                     // print out all the student details
-                    System.out.println(enrolmentObject.students);
+                    System.out.println(enrolmentObject.students.toString());
                     break;
 
                 case 2:
                     // print out all the subject details
-                    System.out.println(enrolmentObject.subjects);
+                    System.out.println(enrolmentObject.subjects.toString());
                     break;
 
                 case 3:
@@ -109,7 +107,7 @@ class StudentEnrolmentSystem {
                     //this scanner will record user input for student number
                     int stdNumInput = userInput.nextInt();
                     if (enrolmentObject.students.contains(stdNumInput)) { // checking if student number exists in student list
-                        System.out.println(enrolmentObject.students.get(stdNumInput));
+                        System.out.println(enrolmentObject.students.get(stdNumInput).toString());
                     } else {
                         System.out.println("The student " + stdNumInput + " does not exist.");
                     }
@@ -120,7 +118,7 @@ class StudentEnrolmentSystem {
                     // this scanner will record user input for subject number
                     int subNumInput = userInput.nextInt();
                     if (enrolmentObject.subjects.contains(subNumInput)) { // checking if subject number exists in subject list
-                        System.out.println(enrolmentObject.subjects.get(subNumInput));
+                        System.out.println(enrolmentObject.subjects.get(subNumInput).toString());
                     } else {
                         System.out.println("The subject " + subNumInput + " does not exist.");
                     }
@@ -145,7 +143,7 @@ class StudentEnrolmentSystem {
                     // displaying a student's enrolment.
                     int studentId = userInput.nextInt();
                     if(enrolmentObject.enrolments.contains(studentId)) {
-                        System.out.println(enrolmentObject.enrolments.get(studentId));
+                        System.out.println(enrolmentObject.enrolments.get(studentId).toString());
                     } else {
                         System.out.println("The student " + studentId + " hasn't enrolled in a subject.");
                     }
