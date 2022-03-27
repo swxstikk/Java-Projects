@@ -94,9 +94,9 @@ public class Student {
     }
 
     public String toString() {
-        String s = "------------\n";
+        String s= "";
 
-        s += "Student details: " + number + name + dob + email + address + phone + degree + "\n\n";
+        s += + number + ", " + name + ", " +dob +", " + email + ", " +address +", " + phone +", " + degree + "\n\n";
 
         /*
         'students' arrayList is defined in another class(StudentEnrolmentSystem) Therefore, the error in the below lines of code.

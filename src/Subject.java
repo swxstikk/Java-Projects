@@ -107,9 +107,9 @@ public class Subject {
     }
 
     public String toString() {
-        String s = "------------\n";
+        String s = "";
 
-        s += "Subject details: " + code + name + credit + description + preRequisites + classTime + labTime + "\n\n";
+        s +=  code + ", " + name + ", " +credit +", " + description + ", " +preRequisites + ", " +classTime +", " + labTime + "\n\n";
 
         /*
         'subjects' arrayList is defined in another class(StudentEnrolmentSystem) Therefore, the error in the below lines of code.

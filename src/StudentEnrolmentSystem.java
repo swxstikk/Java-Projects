@@ -86,6 +86,7 @@ class StudentEnrolmentSystem {
 
         To-Do List:
         - Implement a system where the input will be asked until '7' is reached. (DONE)
+        - Figure out why the hashcode of the Objects/Lists gets printed instead of the actual values.
         - Build the UML Diagram for the entire program.
         - Figure out the relationships between the 4 different classes for the UML.
 
@@ -94,7 +95,8 @@ class StudentEnrolmentSystem {
 
                 case 1:
                     // print out all the student details
-                    System.out.println(enrolmentObject.students.toString());
+                   // System.out.println(enrolmentObject.students.toString());
+                    System.out.println(Swastik);
                     break;
 
                 case 2:
