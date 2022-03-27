@@ -60,8 +60,8 @@ class StudentEnrolmentSystem {
     public static void main(String[] args) {
 
         StudentEnrolmentSystem enrolmentObject = new StudentEnrolmentSystem();
-        Student Swastik = new Student(7232408, "Swastik Satapathy", "26/10/2001", "ss7796@uowmail.edu.au", "Kooloobong" +
-                "Villages", "+61 0493301202", "BSc Computer Science (766)");
+        Student Swastik = new Student(7232408, "Swastik Satapathy", "26/10/2001", "ss7796@uowmail.edu.au", "" +
+                "Kooloobong Villages", "+61 0493301202", "BSc Computer Science (766)");
         Subject CSIT121 = new Subject("CSIT121", "Object-Oriented Programming and Design", 6, "This subject teaches OOP"
                 ,"CSIT111", 2, 2);
         enrolmentObject.addStudent(Swastik);
@@ -107,9 +107,10 @@ class StudentEnrolmentSystem {
                 case 3:
                     //finding a student
                     //this scanner will record user input for student number
+                    System.out.print("Input a student number: ");
                     int stdNumInput = userInput.nextInt();
                     if (enrolmentObject.students.contains(stdNumInput)) { // checking if student number exists in student list
-                        System.out.println(enrolmentObject.students.get(stdNumInput).toString());
+                        System.out.println(enrolmentObject.students.indexOf(stdNumInput));
                     } else {
                         System.out.println("The student " + stdNumInput + " does not exist.");
                     }
@@ -118,6 +119,7 @@ class StudentEnrolmentSystem {
                 case 4:
                     // finding a subject
                     // this scanner will record user input for subject number
+                    System.out.print("Input a subject code: ");
                     int subNumInput = userInput.nextInt();
                     if (enrolmentObject.subjects.contains(subNumInput)) { // checking if subject number exists in subject list
                         System.out.println(enrolmentObject.subjects.get(subNumInput).toString());
