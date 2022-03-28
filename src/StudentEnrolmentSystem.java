@@ -31,8 +31,6 @@ class StudentEnrolmentSystem {
         // checking if student already exists in the list. If not, we add it to the list.
         if(!students.contains(studentObject)) {
             students.add(studentObject);
-        } else {
-            System.out.println("The student already exists in the list");
         }
     }
 
@@ -40,8 +38,6 @@ class StudentEnrolmentSystem {
         // checking if subject already exists in the list. If not, we add it to the list.
         if (!subjects.contains(subjectObject)) {
             subjects.add(subjectObject);
-        } else {
-            System.out.println("The subject already exists in the list");
         }
     }
 
@@ -49,15 +45,18 @@ class StudentEnrolmentSystem {
         // checking if enrolment record already exists in the list. if not, we add it to the list.
         if (!enrolments.contains(enrolmentObject)) {
             enrolments.add(enrolmentObject);
-        } else {
-            System.out.println("The enrolment record already exists in the list");
         }
     }
 
-    public Student findStudent(Student studentNumber) {
+    public void findStudent(Student studentObject) {
         // finding if given values corresponding to student attributes exists in our student list.
-        Student testStudent = new Student();
-        return testStudent;
+        if(students.contains(studentObject)) {
+            for(int i=0;i<students.size();i++) {
+                if(students.get(i) == studentObject) {
+                    System.out.print(students.get(i));
+                }
+            }
+        }
     }
 
     public void findSubject() {
@@ -85,9 +84,10 @@ class StudentEnrolmentSystem {
         enrolmentObject.addStudent(Swastik);
         enrolmentObject.addSubject(CSIT121);
         Scanner userInput = new Scanner(System.in); // using scanner for reading user's input
+        enrolmentObject.menu();
+        boolean done = false;
 
-        while(true) { // using a while loop so user can enter input values upto 7.
-            enrolmentObject.menu();
+        while(!done) { // using a while loop so user can enter input values upto 7.
             int inputValue = userInput.nextInt();
             if(inputValue==7)
                 break;
@@ -108,7 +108,7 @@ class StudentEnrolmentSystem {
 
                 case 1:
                     // print out all the student details
-                   // System.out.println(enrolmentObject.students.toString());
+                    // System.out.println(enrolmentObject.students.toString());
                     System.out.println(Swastik);
                     break;
 
@@ -122,9 +122,8 @@ class StudentEnrolmentSystem {
                     //this scanner will record user input for student number
                     System.out.print("Input a student number: ");
                     int stdNumInput = userInput.nextInt();
-                    if (enrolmentObject.students.contains(stdNumInput)) {
-                        //System.out.println("The student " + stdNumInput + " does not exist.");
-                        System.out.println(enrolmentObject.students.indexOf(stdNumInput));
+                    if (enrolmentObject.students.equals(stdNumInput)) {
+                        System.out.println(enrolmentObject.students.toString());
                     } else { // checking if student number exists in student list
                         System.out.println("The student " + stdNumInput + " does not exist.");
                     }
@@ -142,22 +141,28 @@ class StudentEnrolmentSystem {
                     }
                     break;
 
-
                 case 5:
                     // taking user input for student & subject to add into enrollment if not enrolled already.
                     System.out.println("Input a student number: ");
                     int studentNum = userInput.nextInt();
-                    System.out.println("Input a subject code: ");
-                    String subjectNum = userInput.nextLine();
-                    if(enrolmentObject.enrolments.contains(studentNum)  && enrolmentObject.enrolments.contains(subjectNum)) {
-                        System.out.println("The student " + studentNum + " has enrolled in the " +
-                                "subject " + subjectNum + " already");
-                    } else {
-                        Enrolment enrollmentObject = new Enrolment(studentNum, subjectNum);
-                        enrolmentObject.addEnrollment(enrollmentObject);
-                        System.out.println("A new enrolment for the student " + studentNum + " on the subject "
-                                + subjectNum + " has been added to the list.");
-                    }
+                    Student s = new Student();
+                    s.setNumber(7232408);
+                    if (enrolmentObject.students.contains(s)) {
+                        System.out.println("Input a subject code: ");
+                        String subjectNum = userInput.nextLine();
+                        Enrolment e = new Enrolment(studentNum, subjectNum);
+                        if (enrolmentObject.enrolments.contains(e)) {
+                            System.out.println("The student " + studentNum + " has enrolled in the " +
+                                    "subject " + subjectNum + " already");
+                        } else {
+                            Enrolment newEnrolment = new Enrolment(studentNum, subjectNum);
+                            enrolmentObject.addEnrollment(newEnrolment);
+                            System.out.println("A new enrolment for the student " + studentNum + " on the subject "
+                                    + subjectNum + " has been added to the list.");
+                        }
+                    System.out.println("The student " + studentNum + " has enrolled in the " +
+                            "subject " + subjectNum + " already");
+            }
                     break;
 
                 case 6:
@@ -172,13 +177,13 @@ class StudentEnrolmentSystem {
 
                 case 7:
                     System.out.println("Bye");
+                    done = true;
                     break;
                 default:
                     System.out.println("nothing else matched!");
             }
-            System.out.println(" "); // printing empty line for spacing according to assignment specifications.
+            //System.out.println(" "); // printing empty line for spacing according to assignment specifications.
             enrolmentObject.menu();
         }
     }
-
 }
