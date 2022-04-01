@@ -38,8 +38,8 @@ public class Enrolment {
     public void setCode(String newCode) {this.code=newCode;}
     public void setDate(String newDate) {this.date=newDate;}
     public String toString() {
-        String e = "------------\n";
-        e += "Enrolment details: " + number + code + date + "\n\n";
+        String e="";
+        e += number + ","+ code + ","+date+"\n";
         return e;
     }
 }

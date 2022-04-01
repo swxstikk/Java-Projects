@@ -9,17 +9,21 @@ Assignment number: 1
 */
 import java.util.ArrayList; // used for creating lists to store objects.
 import java.util.Scanner; // used for taking user inputs.
+
 class StudentEnrolmentSystem {
     // creating empty lists to store objects later
+
     private ArrayList<Student> students;
     private ArrayList<Subject> subjects;
     private ArrayList<Enrolment> enrolments;
+
     public StudentEnrolmentSystem() {
         // initialization constructor which creates empty lists for all data members of the class.
         students = new ArrayList<Student>(0);
         subjects = new ArrayList<Subject>(0);
         enrolments = new ArrayList<Enrolment>(0);
     }
+
     public void addStudent(Student studentObject) {
         // checking if student already exists in the list. If not, we add it to the list.
         if (!students.contains(studentObject)) {
@@ -28,6 +32,7 @@ class StudentEnrolmentSystem {
             System.out.println("The student " + studentObject.getNumber() + " already exists.");
         }
     }
+
     public void addSubject(Subject subjectObject) {
         // checking if subject already exists in the list. If not, we add it to the list.
         if (!subjects.contains(subjectObject)) {
@@ -36,17 +41,11 @@ class StudentEnrolmentSystem {
             System.out.println("The subject "+subjectObject.getCode()+" already exists.");
         }
     }
+
     public void addEnrollment(Enrolment enrolmentObject) {
-        for (Enrolment e : enrolments) // traversing the arrayLists and comparing values to check if enrolment exists
-            if (e.getCode().equals(enrolmentObject.getCode()) && e.getNumber() == enrolmentObject.getNumber()) {
-                System.out.println("The student "+e.getNumber() +" has enrolled in the subject "
-                        +e.getCode() +"\n" + " already.");
-            }  else {
-                    enrolments.add(enrolmentObject);
-                    System.out.println("A new enrolment for the student " + enrolmentObject.getNumber() + " on the subject " +
-                            enrolmentObject.getCode() + "\n" + " has been added to the list.\n");
-                }
+            enrolments.add(enrolmentObject);
             }
+
     public boolean findStudent(Student studentObject) {
         // finding if given values corresponding to student attributes exists in our student list.
         boolean found=false;
@@ -57,6 +56,7 @@ class StudentEnrolmentSystem {
             }
         return found;
         }
+
     public boolean findSubject(Subject subjectObject) {
         // finding if given values corresponding to subject attributes exists in our subject list.
         boolean found=false;
@@ -67,17 +67,32 @@ class StudentEnrolmentSystem {
             }
         return found;
         }
+
     public boolean findEnrolment(Enrolment enrolmentObject) {
         // finding an enrolment when given student number and subject code
         boolean found = false;
         for (Enrolment en : enrolments) { // traversing the arrayLists and comparing values till we find if the enrolment exists
             if (en.getNumber() == enrolmentObject.getNumber() && en.getCode().equals(enrolmentObject.getCode())) {
                 found = true;
-                System.out.println("test");
+                System.out.println("The student "+en.getNumber() +" has enrolled in the subject "
+                        +en.getCode() +"\n" + " already.\n");
             }
         }
         return found;
     }
+
+    public boolean printEnrolment(Enrolment enrol) {
+        // printing the enrolment arrayList contents
+        boolean found=false;
+        for(Enrolment e: enrolments)
+            if(e.getNumber() == enrol.getNumber()) {
+                found=true;
+                System.out.print(e.toString());
+            }
+        System.out.print("\n");
+        return found;
+    }
+
     private void menu() {
         System.out.println("1. Display all students");
         System.out.println("2. Display all subjects");
@@ -88,9 +103,9 @@ class StudentEnrolmentSystem {
         System.out.println("7. Exit");
         System.out.print("\nPlease select one from the menu: ");
     }
+
     public static void main(String[] args) {
         StudentEnrolmentSystem mainClass = new StudentEnrolmentSystem();
-
         // creating the Student objects and assigning values given in the assignment pdf.
         Student Albert = new Student(100100, "Albert", "13/10/1965", "a100@uni.edu.au",
                 "12 Robert street Woonona NSW 2517", "12345678", "Bacholar of CS");
@@ -178,6 +193,7 @@ class StudentEnrolmentSystem {
         mainClass.addSubject(CSIT111);
         mainClass.addSubject(CSIT121);
         mainClass.addSubject(CSCI251);
+
         Scanner userInput = new Scanner(System.in); // using scanner for reading user's input
         mainClass.menu();
         boolean done = false;
@@ -221,15 +237,21 @@ class StudentEnrolmentSystem {
                     int studentNum = userInput.nextInt();
                     System.out.print("Input a subject code: ");
                     String subjectCode = userInput.next();
-                    mainClass.addEnrollment(new Enrolment(studentNum, subjectCode, "01/03/2022"));
+                    Enrolment enrol = new Enrolment(studentNum, subjectCode, "01/03/2022");
+                    if(!mainClass.findEnrolment(enrol)) {
+                        mainClass.addEnrollment(enrol);
+                        System.out.println("A new enrolment for the student " + enrol.getNumber() + " on the subject " +
+                                enrol.getCode() + "\n" + " has been added to the list.\n");
+                    }
                     mainClass.menu();
                     break;
                 case 6:
                     // displaying a student's enrolment.
                     System.out.print("Input a student number: ");
                     int studentId = userInput.nextInt();
-                    Enrolment e = new Enrolment(studentId);
-                    mainClass.findEnrolment(e);
+                    if(!mainClass.printEnrolment(new Enrolment(studentId))) {
+                        System.out.println("The student "+studentId +" hasn't enrolled in a subject.\n");
+                    }
                     mainClass.menu();
                     break;
                 case 7:

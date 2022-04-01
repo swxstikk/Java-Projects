@@ -73,7 +73,7 @@ public class Student {
     }
     public String toString() {
         String s= "";
-        s += + number + ", " + name + ", " +dob +", " + email + ", " +address +", " + phone +", " + degree + "\n\n";
+        s += number + ", " + name + ", " +dob +", " + email + ", " +address +", " + phone +", " + degree + "\n\n";
         return s;
     }
 }
