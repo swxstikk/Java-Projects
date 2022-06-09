@@ -1,0 +1,91 @@
+ALFKI,Maria Anders,Obere Str. 57,030-0074321 
+ANATR,Ana Trujillo,Avda. de la Constituci¢n 2222,(5) 555-4729
+ANTON,Antonio Moreno,Mataderos  2312,(5) 555-3932
+AROUT,Thomas Hardy,120 Hanover Sq.,(171) 555-7788
+BERGS,Christina Berglund,BerguvsvÑgen  8,0921-12 34 65
+BLAUS,Hanna Moos,Forsterstr. 57,0621-08460
+BLONP,Frederique Citeaux,24 Place Kleber,88.60.15.31
+BOLID,Martin Sommer,C/ Araquil 67,(91) 555 22 82
+BONAP,Laurence Lebihan,12 rue des Bouchers,91.24.45.40
+BOTTM,Elizabeth Lincoln,23 Tsawassen Blvd.,(604) 555-4729
+BSBEV,Victoria Ashworth,Fauntleroy Circus,(171) 555-1212
+CACTU,Patricio Simpson,Cerrito 333,(1) 135-5555
+CENTC,Francisco Chang,Sierras de Granada 9993,(5) 555-3392
+CHOPS,Yang Wang,Hauptstr. 29,0452-076545
+COMMI,Pedro Afonso,Av. dos Lusiadas 23,(11) 555-7647
+CONSH,Elizabeth Brown,Berkeley Gardens 12  Brewery ,(171) 555-2282
+DRACD,Sven Ottlieb,Walserweg 21,0241-039123
+DUMON,Janine Labrune,67 rue des Cinquante Otages,40.67.88.88
+EASTC,Ann Devon,35 King George,(171) 555-0297
+ERNSH,Roland Mendel,Kirchgasse 6,7675-3425
+FAMIA,Aria Cruz,Rua Oros 92,(11) 555-9857
+FISSA,Diego Roel,C/ Moralzarzal 86,(91) 555 94 44
+FOLIG,Martine Rance,184 chausse de Tournai,20.16.10.16
+FOLKO,Maria Larsson,èkergatan 24,0695-34 67 21
+FRANK,Peter Franken,Berliner Platz 43,089-0877310
+FRANR,Carine Schmitt,54 rue Royale,40.32.21.21
+FRANS,Paolo Accorti,Via Monte Bianco 34,011-4988260
+FURIB,Lino Rodriguez,Jardim das rosas n. 32,(1) 354-2534
+GALED,Eduardo Saavedra,Rambla de Catalu§a 23,(93) 203 4560
+GODOS,Jose Pedro Freyre,C/ Romero 33,(95) 555 82 82
+GOURL,AndrÇ Fonseca,Av. Brasil 442,(11) 555-9482
+GREAL,Howard Snyder,2732 Baker Blvd.,(503) 555-7555
+GROSR,Manuel Pereira,5 Ave. Los Palos Grandes,(2) 283-2951
+HANAR,Mario Pontes,Rua do Paco 67,(21) 555-0091
+HILAA,Carlos Hernandez,Carrera 22 con Ave. Carlos Soublette #8-35,(5) 555-1340
+HUNGC,Yoshi Latimer,City Center Plaza 516 Main St.,(503) 555-6874
+HUNGO,Patricia McKenna,8 Johnstown Road,2967 542
+ISLAT,Helen Bennett,Garden House Crowther Way,(198) 555-8888
+KOENE,Philip Cramer,Maubelstr. 90,0555-09876
+LACOR,Daniel Tonini,67 avenue de l'Europe,30.59.84.10
+LAMAI,Annette Roulet,1 rue Alsace-Lorraine,61.77.61.10
+LAUGB,Yoshi Tannamuri,1900 Oak St.,(604) 555-3392
+LAZYK,John Steel,12 Orchestra Terrace,(509) 555-7969
+LEHMS,Renate Messner,Magazinweg 7,069-0245984
+LETSS,Jaime Yorres,87 Polk St. Suite 5,(415) 555-5938
+LILAS,Carlos Gonzalez,Carrera 52 con Ave. Bolvar #65-98 Llano Largo,(9) 331-6954
+LINOD,Felipe Izquierdo,Ave. 5 de Mayo Porlamar,(8) 34-56-12
+LONEP,Fran Wilson,89 Chiaroscuro Rd.,(503) 555-9573
+MAGAA,Giovanni Rovelli,Via Ludovico il Moro 22,035-640230
+MAISD,Catherine Dewey,Rue Joseph-Bens 532,(02) 201 24 67
+MEREP,Jean Fresniere,43 rue St. Laurent,(514) 555-8054
+MORGK,Alexander Feuer,Heerstr. 22,0342-023176
+NORTS,Simon Crowther,South House 300 Queensbridge,(171) 555-7733
+OCEAN,Yvonne Moncada,Ing. Gustavo Moncada 8585 Piso 20-A,(1) 135-5333
+OLDWO,Rene Phillips,2743 Bering St.,(907) 555-7584
+OTTIK,Henriette Pfalzheim,Mehrheimerstr. 369,0221-0644327
+PARIS,Marie Bertrand,265 Boulevard Charonne,(1) 42.34.22.66
+PERIC,Guillermo Fernandez,Calle Dr. Jorge Cash 321,(5) 552-3745
+PICCO,Georg Pipps,Geislweg 14,6562-9722
+PRINI,Isabel de Castro,Estrada da sa£de n. 58,(1) 356-5634
+QUEDE,Bernardo Batista,Rua da Panificadora 12,(21) 555-4252
+QUEEN,L£cia Carvalho,Alameda dos Canrios 891,(11) 555-1189
+QUICK,Horst Kloss,Taucherstra·e 10,0372-035188
+RANCH,Sergio Gutierrez,Av. del Libertador 900,(1) 123-5555
+RATTC,Paula Wilson,2817 Milton Dr.,(505) 555-5939
+REGGC,Maurizio Moroni,Strada Provinciale 124,0522-556721
+RICAR,Janete Limeira,Av. Copacabana 267,(21) 555-3412
+RICSU,Michael Holz,Grenzacherweg 237,0897-034214
+ROMEY,Alejandra Camino,Gran Via 1,(91) 745 6200
+SANTG,Jonas Bergulfsen,Erling Skakkes gate 78,07-98 92 35
+SAVEA,Jose Pavarotti,187 Suffolk Ln.,(208) 555-8097
+SEVES,Hari Kumar,90 Wadhurst Rd.,(171) 555-1717
+SIMOB,Jytte Petersen,Vinbëltet 34,31 12 34 56
+SPECD,Dominique Perrier,25 rue Lauriston,(1) 47.55.60.10
+SPLIR,Art Braunschweiger,P.O. Box 555,(307) 555-4680
+SUPRD,Pascale Cartrain,Boulevard Tirou 255,(071) 23 67 22 20
+THEBI,Liz Nixon,89 Jefferson Way Suite 2,(503) 555-3612
+THECR,Liu Wong,55 Grizzly Peak Rd.,(406) 555-5834
+TOMSP,Karin Josephs,Luisenstr. 48,0251-031259
+TORTU,Miguel Angel Paolino,Avda. Azteca 123,(5) 555-2933
+TRADH,Anabela Domingues,Av. Ines de Castro 414,(11) 555-2167
+TRAIH,Helvetius Nagy,722 DaVinci Blvd.,(206) 555-8257
+VAFFE,Palle Ibsen,Smagsl get 45,86 21 32 43
+VICTE,Mary Saveley,2 rue du Commerce,78.32.54.86
+VINET,Paul Henriot,59 rue de l'Abbaye,26.47.15.10
+WANDK,Rita MÅller,Adenauerallee 900,0711-020361
+WARTH,Pirkko Koskitalo,Torikatu 38,981-443655
+WELLI,Paula Parente,Rua do Mercado 12,(14) 555-8122
+WHITC,Karl Jablonski,305 - 14th Ave. S. Suite 3B,(206) 555-4112
+WILMK,Matti Karttunen,Keskuskatu 45,90-224 8858
+WOLZA,Zbyszek Piestrzeniewicz,ul. Filtrowa 68,(26) 642-7012
